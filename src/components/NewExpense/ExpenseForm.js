@@ -43,12 +43,12 @@ const ExpenseForm = (props) => {
     const expenseData = {
       id: Math.random().toString(),
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate)
     }
 
     props.onSaveExpense(expenseData)
-    setEnteredDate('')
+    setEnteredTitle('')
     setEnteredAmount('')
     setEnteredDate('')
   }
